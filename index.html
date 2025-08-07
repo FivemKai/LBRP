@@ -24,6 +24,9 @@
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 8px 15px;
+    background: black;
+    border-radius: 5px;
   }
   img.logo {
     max-width: 300px;
@@ -53,12 +56,21 @@
   button:hover {
     background: darkred;
   }
+  #chat-box {
+    margin-top: 40px;
+    background: rgba(0,0,0,0.6);
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 </style>
 </head>
 <body>
 
 <header>
-  <a href="#" onclick="adminLogin()">Admin</a>
+  <a href="admin.html">Admin</a>
 </header>
 
 <img src="London_Bridge_Roleplay.png" alt="London Bridge RP Logo" class="logo">
@@ -70,19 +82,15 @@
 <div class="buttons">
   <button onclick="showUnderConstruction()">Store</button>
   <button onclick="showUnderConstruction()">Partners</button>
+  <button onclick="window.open('https://discord.gg/VbXA5tU5jg', '_blank')">Discord</button>
+</div>
+
+<div id="chat-box">
+  <h2>Live Server Chat</h2>
+  <div id="messages">Bot connection coming soon...</div>
 </div>
 
 <script>
-function adminLogin() {
-  const user = prompt("Enter Username:");
-  const pass = prompt("Enter Password:");
-  if (user === "Admin" && pass === "Admin") {
-    alert("Welcome Admin!");
-  } else {
-    alert("Access Denied!");
-  }
-}
-
 function showUnderConstruction() {
   alert("UNDER CONSTRUCTION");
 }

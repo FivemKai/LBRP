@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.admin-btn {
+    background: black;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.discord-btn {
+    background: #5865F2;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+#chat-box {
+    margin-top: 30px;
+    background: rgba(0,0,0,0.3);
+    padding: 15px;
+    border-radius: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.admin-page {
+    background-color: darkred;
+}
