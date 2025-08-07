@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>London Bridge RP</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('https://i.ibb.co/6g5zX9z/red-lightning.jpg') no-repeat center center fixed;
+    background-size: cover;
+    cursor: url('https://cur.cursors-4u.net/cursors/cur-11/cur1033.cur'), auto;
+    color: white;
+    text-align: center;
+  }
+  header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    background: rgba(0,0,0,0.4);
+  }
+  header a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  img.logo {
+    max-width: 300px;
+    margin-top: 20px;
+  }
+  .description {
+    margin: 20px auto;
+    max-width: 600px;
+    background: rgba(0,0,0,0.6);
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.1em;
+  }
+  .buttons {
+    margin-top: 30px;
+  }
+  button {
+    background: red;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    margin: 10px;
+    border-radius: 6px;
+    font-size: 1.1em;
+    cursor: pointer;
+  }
+  button:hover {
+    background: darkred;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="#" onclick="adminLogin()">Admin</a>
+</header>
+
+<img src="London_Bridge_Roleplay.png" alt="London Bridge RP Logo" class="logo">
+
+<div class="description">
+  <p>Welcome to <strong>London Bridge Roleplay</strong> — the ultimate UK-themed roleplay experience! Immerse yourself in realistic scenarios, stunning environments, and an active, welcoming community.</p>
+</div>
+
+<div class="buttons">
+  <button onclick="showUnderConstruction()">Store</button>
+  <button onclick="showUnderConstruction()">Partners</button>
+</div>
+
+<script>
+function adminLogin() {
+  const user = prompt("Enter Username:");
+  const pass = prompt("Enter Password:");
+  if (user === "Admin" && pass === "Admin") {
+    alert("Welcome Admin!");
+  } else {
+    alert("Access Denied!");
+  }
+}
+
+function showUnderConstruction() {
+  alert("UNDER CONSTRUCTION");
+}
+</script>
+
+</body>
+</html>
