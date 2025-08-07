@@ -40,17 +40,75 @@
   .discord-btn:hover {
     background: #4752C4;
   }
+  #admin-content {
+    display: none;
+  }
+  #password-form {
+    margin-top: 100px;
+  }
+  #password-input {
+    padding: 8px;
+    font-size: 1em;
+    border-radius: 4px;
+    border: none;
+    margin-right: 8px;
+  }
+  #password-submit {
+    padding: 8px 16px;
+    font-size: 1em;
+    border-radius: 4px;
+    border: none;
+    background: #222;
+    color: white;
+    cursor: pointer;
+  }
+  #password-error {
+    color: #ffb3b3;
+    margin-top: 10px;
+  }
 </style>
 </head>
 <body>
 
-<header>
-  <a href="index.html">Back to Home</a>
-</header>
+<div id="password-form">
+  <h2>Enter Admin Password</h2>
+  <input type="password" id="password-input" placeholder="Password">
+  <button id="password-submit">Enter</button>
+  <div id="password-error"></div>
+</div>
 
-<h1>Admin Panel</h1>
-<p>Click below to join the official Discord server:</p>
-<a href="https://discord.gg/VbXA5tU5jg" target="_blank" class="discord-btn">Go to Discord</a>
+<div id="admin-content">
+  <header>
+    <a href="index.html">Back to Home</a>
+  </header>
+
+  <h1>Admin Panel</h1>
+  <p>Click below to join the official Discord server:</p>
+  <a href="https://discord.gg/VbXA5tU5jg" target="_blank" class="discord-btn">Go to Discord</a>
+</div>
+
+<script>
+  const correctPassword = "Admin";
+  const form = document.getElementById('password-form');
+  const adminContent = document.getElementById('admin-content');
+  const input = document.getElementById('password-input');
+  const error = document.getElementById('password-error');
+  const submit = document.getElementById('password-submit');
+
+  submit.onclick = function() {
+    if (input.value === correctPassword) {
+      form.style.display = 'none';
+      adminContent.style.display = 'block';
+    } else {
+      error.textContent = "Incorrect password. Try again.";
+      input.value = "";
+    }
+  };
+
+  input.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') submit.click();
+  });
+</script>
 
 </body>
 </html>
